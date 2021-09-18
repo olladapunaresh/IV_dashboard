@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Assignment - 2
+Accident Prone Roads
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Visualisation Link: https://dev1808.d4sqym1517zi0.amplifyapp.com (Incident Map takes 30-40 seconds time to load data layers (collision and Traffic Volume) because of the huge size).
 
-## Available Scripts
+This Website is based off a subset of accident data specifically related to Road accidents and collisions occurred in Victoria, Australia from time period of 2015 to 2019.
 
-In the project directory, you can run:
+There are 4 visualisations has been created in the dashboard with each specifying different data and providing multiple insights out of it.
 
-### `npm start`
+![alt text](images/Home.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1.	Incident Map
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+It Provides information about the Road accidents and collisions happened in Victoria, Australia from 2016-2019 using geo visualisation. It displays multiple accidents happened in Victoria with the level of casualty occurred. We can check the accidents happened at different areas in multiple timelines (By Hour) using the slider option and also we filter the accidents based on the option of whether they happened on Weekdays or Weekends.
 
-### `npm test`
+We can also toggle the layers of collisions and Traffic Volume where the layer of collisions displays the accidents points with multiple additional information about the accident and Traffic Volume displays the amount of average traffic occurs in different roads on Victoria and gradient  colours displayed ranges from green to red where green means less traffic and red means the more traffic on the roads on average.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![alt text](images/Incident_map.png)
 
-### `npm run build`
+2.	Accidents Weekly
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This Accidents Weekly graph provide  analysis about the rate of accidents in the different week days and weekends which provides evidence that more than average accidents happens in the Thursdays and Fridays especially at the timings of 4:30 PM to 6:30 PM because of rush in the evenings and graph also provides the information about the number of Young drivers are most in the weekends .This information is provided so that additional preventative measures can be implemented in addition to any other useful conclusions that can be drawn.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![alt text](images/accidents_weekly.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3.	Accidents Timeline
 
-### `npm run eject`
+This Accidents Timeline graph provide analysis about the rate of accidents occurred in different months over the years of 2016 – 2019 to mainly understand the trend and seasonality in the no. of accidents over the years. We have also shown a predictions of no. of accidents over first half of 2020 (Jan-Jun) and in order to compute this predictions we have created a timeseries model using fbprophet package.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![alt text](images/trends.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4.	Dangerous Roads
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This Dangerous roads shows a Tree Map which provides the evidence about most dangerous accident prone roads in Victoria which help the proper authorities to take appropriate measures like for example adding speedbumps ,Traffic signs etc. This visualisation was created using Tableau and been published to Tableau Public and using Tableau JavaScript API it was integrated with webpage.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![alt text](images/treemap.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Code Implementation:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Website has been created using ReactJs and the Incident Map has been implemented using the Mapboxgl packages, Accidents Weekly and Accidents Timeline graphs has been implemented  using ChartJs. Finally we have used Tableau JavaScript API Integration to implement the Dangerous roads Tree Map by publishing the visualisation to Tableau Public.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+NOTE: All data taken from discover.data.vic.gov.au.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
